@@ -1,10 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>remember me</title>
+  <style>
+    html, body, div {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .bg {
+      width: 100%;
+      height: 100%;
+      background-color: #201520;
+      background-image: url(static/bg.png);
+    }
+    .au {
+      width: 55rem;
+      height: 30rem;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .aurora {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate3d(0, 0, 0);
+      background-size: 100% auto;
+      opacity: 0;
+    }
+    @keyframes aurora {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+      14% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+      28% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+    }
+    .aurora0 {
+      background-image: url(static/au-0.png);
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 0.2s infinite normal none;
+    }
+    .aurora1 {
+      background-image: url(static/au-1.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 0.7s infinite normal none;
+    }
+    .aurora2 {
+      background-image: url(static/au-2.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 1.2s infinite normal none;
+    }
+    .aurora3 {
+      background-image: url(static/au-3.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 1.7s infinite normal none;
+    }
+    .aurora4 {
+      background-image: url(static/au-4.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 2.2s infinite normal none;
+    }
+    .aurora5 {
+      background-image: url(static/au-5.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 2.7s infinite normal none;
+    }
+    .aurora6 {
+      background-image: url(static/au-6.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 3.2s infinite normal none;
+    }
+    .aurora7 {
+      background-image: url(static/au-7.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 3.7s infinite normal none;
+    }
+    .aurora8 {
+      background-image: url(static/au-8.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 4.2s infinite normal none;
+    }
+    .aurora9 {
+      background-image: url(static/au-9.png) ;
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 4.7s infinite normal none;
+    }
+    .aurora10 {
+      background-image: url(static/au-10.png);
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 5.2s infinite normal none;
+    }
+    .aurora11 {
+      background-image: url(static/au-11.png);
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 5.7s infinite normal none;
+    }
+    .aurora12 {
+      background-image: url(static/au-12.png);
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 6.2s infinite normal none;
+    }
+    .aurora13 {
+      background-image: url(static/au-13.png);
+      background-repeat: no-repeat;
+      animation: aurora 7s linear 6.7s infinite normal none;
+    }
+    .mt {
+      width: 100%;
+      height: 15rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .mountain {
+      width: 1000em;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    @keyframes moving {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+    .mountain1 {
+      height: 100%;
+      z-index: 1;
+      background-image: url(static/mt-2.png);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      animation: moving 360s linear infinite normal none;
+    }
+    .mountain2 {
+      height: 70%;
+      z-index: 2;
+      background-image: url(static/mt-1.png);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      animation: moving 240s linear infinite normal none;
+    }
+    .mountain3 {
+      height: 60%;
+      z-index: 3;
+      background-image: url(static/mt-0.png);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      animation: moving 120s linear infinite normal none;
+    }
+    @keyframes bear-run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -50em 0;
+      }
+    }
+    .bear {
+      z-index: 4;
+      width: 6em;
+      height: 4em;
+      position: absolute;
+      left: 50%;
+      bottom: 2%;
+      background: url(static/bear.png) 0 0 no-repeat;
+      background-size: 50em 3.5em;
+      animation: bear-run 0.8s steps(8) infinite normal forwards;
+    }
+  </style>
 </head>
 <body>
-<h1>hello</h1>
+<div class="bg">
+  <div class="au">
+    <div class="aurora aurora0"></div>
+    <div class="aurora aurora1"></div>
+    <div class="aurora aurora2"></div>
+    <div class="aurora aurora3"></div>
+    <div class="aurora aurora4"></div>
+    <div class="aurora aurora5"></div>
+    <div class="aurora aurora6"></div>
+    <div class="aurora aurora7"></div>
+    <div class="aurora aurora8"></div>
+    <div class="aurora aurora9"></div>
+    <div class="aurora aurora10"></div>
+    <div class="aurora aurora11"></div>
+    <div class="aurora aurora12"></div>
+    <div class="aurora aurora13"></div>
+  </div>
+  <div class="mt">
+    <div class="mountain mountain1"></div>
+    <div class="mountain mountain2"></div>
+    <div class="mountain mountain3"></div>
+  </div>
+  <div class="bear"></div>
+</div>
 </body>
+<script>
+  let audio = new Audio();
+  audio.loop = "loop";
+  audio.src = 'static/music.mp3';
+  audio.load();
+  audio.play();
+</script>
 </html>
