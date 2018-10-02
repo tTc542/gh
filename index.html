@@ -192,6 +192,13 @@
       background-size: 50em 3.5em;
       animation: bear-run 0.8s steps(8) infinite normal forwards;
     }
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -220,8 +227,8 @@
   <div class="bear"></div>
   <audio src="static/music.mp3" autoplay loop></audio>
 </div>
+<div class="mask"></div>
 </body>
 <script>
-  document.addEventListener('touchmove', e => e.preventDefault())
 </script>
 </html>
