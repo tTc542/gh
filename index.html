@@ -28,7 +28,6 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, 0);
-      overflow: hidden;
     }
     .aurora {
       width: 100%;
@@ -222,4 +221,7 @@
   <audio src="static/music.mp3" autoplay loop></audio>
 </div>
 </body>
+<script>
+  document.addEventListener('touchmove', e => e.preventDefault())
+</script>
 </html>
