@@ -22,8 +22,8 @@
       overflow: hidden;
     }
     .au {
-      width: 55rem;
-      height: 30rem;
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 0;
       left: 50%;
@@ -36,7 +36,8 @@
       top: 0;
       left: 0;
       transform: translate3d(0, 0, 0);
-      background-size: 100% auto;
+      background-size: 200% auto;
+      background-position: center 0;
       opacity: 0;
     }
     @keyframes aurora {
@@ -192,13 +193,6 @@
       background-size: 50em 3.5em;
       animation: bear-run 0.8s steps(8) infinite normal forwards;
     }
-    .mask {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
   </style>
 </head>
 <body>
@@ -227,7 +221,6 @@
   <div class="bear"></div>
   <audio src="static/music.mp3" autoplay loop></audio>
 </div>
-<div class="mask"></div>
 </body>
 <script>
 </script>
