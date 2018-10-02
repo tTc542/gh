@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta charset="UTF-8">
-  <title>remember me</title>
+  <title>r&M</title>
   <style>
     html, body, div {
       margin: 0;
@@ -132,6 +132,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
+      overflow: hidden;
     }
     .mountain {
       width: 1000em;
@@ -216,13 +217,7 @@
     <div class="mountain mountain3"></div>
   </div>
   <div class="bear"></div>
+  <audio src="static/music.mp3" autoplay loop></audio>
 </div>
 </body>
-<script>
-  let audio = new Audio();
-  audio.loop = "loop";
-  audio.src = 'static/music.mp3';
-  audio.load();
-  audio.play();
-</script>
 </html>
